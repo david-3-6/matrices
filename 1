@@ -1,0 +1,90 @@
+Algoritmo CALCULADORA_DETERMINANTES
+	Definir A11 Como Real;
+	Definir A12 Como Real;
+	Definir A13 Como Real;
+	Definir A14 Como Real;
+	Definir A21 Como Real;
+	Definir A22 Como Real;
+	Definir A23 Como Real;
+	Definir A24 Como Real;
+	Definir A31 Como Real;
+	Definir A32 Como Real;
+	Definir A33 Como Real;
+	Definir A34 Como Real;
+	Definir A41 Como Real;
+	Definir A42 Como Real;
+	Definir A43 Como Real;
+	Definir A44 Como Real;
+	Definir B11 Como Real;
+	Definir B12 Como Real;
+	Definir B13 Como Real;
+	Definir B21 Como Real;
+	Definir B22 Como Real;
+	Definir B23 Como Real;
+	Definir B31 Como Real;
+	Definir B32 Como Real;
+	Definir B33 Como Real;
+	Definir OPERACION Como Real;
+	Escribir 'Escribe a11';
+	Leer A11;
+	Escribir 'Escribe a12';
+	Leer A12;
+	Escribir 'Escribe a13';
+	Leer A13;
+	Escribir 'Escribe a14';
+	Leer A14;
+	Escribir 'Escribe a21';
+	Leer A21;
+	Escribir 'Escribe a22';
+	Leer A22;
+	Escribir 'Escribe a23';
+	Leer A23;
+	Escribir 'Escribe a24';
+	Leer A24;
+	Escribir 'Escribe a31';
+	Leer A31;
+	Escribir 'Escribe a32';
+	Leer A32;
+	Escribir 'Escribe a33';
+	Leer A33;
+	Escribir 'Escribe a34';
+	Leer A34;
+	Escribir 'Escribe a41';
+	Leer A41;
+	Escribir 'Escribe a42';
+	Leer A42;
+	Escribir 'Escribe a43';
+	Leer A43;
+	Escribir 'Escribe a44';
+	Leer A44;
+	Si A24 == 0 Entonces           
+		B11 <- A21;
+		B12 <- A22;
+		B13 <- A23;
+	SiNo
+		B11 <- A24 * A11 - A14 * A21;
+		B12 <- A24 * A12 - A14 * A22;
+		B13 <- A24 * A13 - A14 * A23;
+	FinSi
+	Si A34 == 0 Entonces           
+		B21 <- A31;
+		B22 <- A32;
+		B23 <- A33;
+	SiNo
+		B21 <- A34 * A11 - A14 * A31;
+		B22 <- A34 * A12 - A14 * A32;
+		B23 <- A34 * A13 - A14 * A33;
+	FinSi
+	Si A44 == 0 Entonces           
+		B31 <- A41;
+		B32 <- A42;
+		B33 <- A43;
+	SiNo
+		B31 <- A44 * A11 - A14 * A41;
+		B32 <- A44 * A12 - A14 * A42;
+		B33 <- A44 * A13 - A14 * A43;
+	FinSi
+	OPERACION <- B11 * B22 * B33 + B12 * B23 * B31 + B13 * B21 * B32 - B13 * B22 * B31 - B12 * B21 * B33 - B11 * B23 * B32;
+	Escribir 'El resultado es ', OPERACION;
+
+	FinAlgoritmo
